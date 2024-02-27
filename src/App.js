@@ -5,6 +5,7 @@ import Alumnos from './componentes/alumnos/Alumnos';
 import Calificaciones from './componentes/calificaciones/Calificaciones';
 import Carreras from './componentes/carreras/Carreras';
 import { BrowserRouter  as Router,Routes, Route } from 'react-router-dom';
+import NuevoAlumno from './componentes/alumnos/nuevoalumno';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           
           <Routes>
             <Route path="/" element={<Alumnos/>} />
+            <Route path="/nuevo-alumno" element={<NuevoAlumno/>} />
             <Route path="/carreras" element={<Carreras/>} />
             <Route path="/calificaciones" element={<Calificaciones/>} />
           </Routes>

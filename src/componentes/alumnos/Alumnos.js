@@ -1,5 +1,7 @@
 import React, { useEffect, useState }  from 'react';
 import ClienteAxios from '../../config/axios';
+import { Fragment } from 'react';
+import {Link} from 'react-router-dom';
 
 function Alumnos(){
 const[alumnos, guardarAlumnos] =useState ([]);
@@ -15,6 +17,12 @@ useEffect ( ()=>{
 },[]);
 
 return (
+    <Fragment>
+        <Link to = {"/nuevo-alumno"} class="btn btn-verde nvo-alumno"><i class="fas fa-plus-circle">
+            Nuevo alumno
+        </i>
+        </Link>
+
     <ul class="listado-alumnos">
         {alumnos.map(alumno =>
             <li class = "alumno">
@@ -37,6 +45,7 @@ return (
             </li>
             )}
     </ul>
+    </Fragment>
 )
 }
 export default Alumnos;
